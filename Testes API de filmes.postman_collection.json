@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "4a5f92a5-c555-4b42-a022-6fa1436bcc16",
+		"name": "Testes API de filmes",
+		"description": "testando algumas APIs.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31348472"
+	},
+	"item": [
+		{
+			"name": "pegar todos os filmes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/filmes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"filmes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pegar filme por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/filmes/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"filmes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar filme",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"genero\": \"Comédia\",\r\n        \"id\": 4,\r\n        \"nota\": 5,\r\n        \"titulo\": \"As branquelas\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/filmes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"filmes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar informações do filme",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"genero\": \"Comédia\",\r\n    \"id\": 2,\r\n    \"nota\": 4,\r\n    \"titulo\": \"O pequenino\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/filmes/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"filmes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletar filme por id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/filmes/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"filmes",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
